@@ -19,7 +19,9 @@ Run the calculator:
 
 Type
 python calculator.py
-For the unit section it not runining for some reason i can't figure out why but i did try my best
+
+For the unit section it not runining for some reason i can't figure out why but i did try my best with the code
+
 Run unit tests:
 Type
 python -m unitest phyton
