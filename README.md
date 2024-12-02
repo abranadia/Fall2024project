@@ -1,35 +1,64 @@
 # Fall2024project
+Calculator Project
+I created this project using Python. Basically it a calculator with a graphical user interface (GUI) built using Tkinter. It performs basic statistical calculations, including standard deviation, mean, z-scores, and linear regression.
 
-Overall
-this Python-based calculator performs statistical functions like mean, standard deviation, z-scores, linear regression, and y predictions. It uses Tkinter for the UI and supports unit and end-to-end testing.
+Features 
+Sample Standard Deviation: Calculates standard deviation for a sample dataset.
+Population Standard Deviation: Calculates standard deviation for a population dataset.
+Mean: Computes the average of a dataset.
+Z-Score: Computes the z-score using a value, mean, and standard deviation.
+Linear Regression Formula: Derives the slope (m) and intercept (b) from X, Y pairs.
+Predict Y: Predicts a Y value using the regression formula.
 
-The Requirements
+The Installation needed for the project: 
 
-Python 3.8+
-Libraries: tkinter, playwright, unittest
+Clone the Repository:
+Type code
+git clone <repository-url>
+cd Calculator_Project
 
-Setup
-Clone the repository.
-Install Playwright:
+Install Required Libraries:
+Type code
+pip install -r requirements.txt
 
+Install Playwright (For UI Tests):
+
+Type code
 pip install playwright
-python -m playwright install
-Usage
-Run the calculator:
+playwright install
 
-Type
-python calculator.py
+To Run the Calculator:
+Type code
+python calculator_ui.py
 
-For the unit section it not runining for some reason i can't figure out why but i did try my best with the code
+To Run the Unit Tests
+To test the calculator logic:
+Type code
+python -m unittest discover -s tests
+Run UI Tests
+Ensure the calculator is running, then:
 
-Run unit tests:
-Type
-python -m unitest phyton
+Type code
+pytest tests/test_ui.py
 
-Run end-to-end tests:
-Start the UI:
-Type
-python calculator.py
-In another terminal:
-Type
-python unitest.py
+My Folder Structure
+
+Calculator_Project (folder)
+│
+├── calculator.py    # Contains the core calculation logic
+├── calculator_ui.py  # Main UI file for the calculator
+│
+├── tests (folder)               # Contains unit and UI tests
+│   ├── test_calculator_logic.py
+│   ├── test_ui.py
+│
+├── README.md              # Contains project documentation
+
+Project Requirements
+Python 3.8+
+Tkinter (pre-installed with Python)
+Playwright (for UI testing)
+
+Project Usage
+Open the calculator, input the required values, and click the relevant button to calculate results.
+The test is not working but i tied my best with giving it a try 
