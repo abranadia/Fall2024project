@@ -61,4 +61,4 @@ Playwright (for UI testing)
 
 Project Usage
 Open the calculator, input the required values, and click the relevant button to calculate results.
-The test is not working but i tied my best with giving it a try 
+The test is not working but i tried my best with giving it a try 
