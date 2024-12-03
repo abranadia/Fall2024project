@@ -45,4 +45,4 @@ calculator-project/
 Final presentation 
 https://www.loom.com/share/544bed1561fe4a8eb8d4ef3ca7e97ede?sid=d1a261d3-9bfa-413b-a855-241f05636c44
 
-copy link and paste into google chrome. The video should appear and work perfectly !
+
