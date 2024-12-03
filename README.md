@@ -16,11 +16,33 @@ This project is a web-based calculator that performs statistical calculations us
 - Python 3.7 or newer
 - Flask
 - Playwright for end-to-end testing 
-## Setup
 
-### 1. Clone the repository
-Clone this repository to your local machine:
+How to run the code in the terminal : 
+ App
+ Paste: python app.py in the terminal with the app.py file open
 
-```bash
-git clone https://github.com/yourusername/calculator-project.git
-cd calculator-project
+Unit tests 
+paste: pytest tests/test_calculator_logic.py in the terminal with the test_calculator_logic.py file open
+
+The unit test failed to run successfully. I spent most of my time trying to fix it, but it still won't run.
+
+End-to-end tests
+Paste: pytest tests/test_playwright.py in the terminal with test_playwright.py file open
+
+Project Architecture: 
+
+calculator-project/
+├── app.py                  # Flask application (Controller)
+├── calculator_logic.py     # Calculator logic (Domain Logic)
+├── templates/              # HTML templates for the web interface (View)
+│   └── index.html          # Main HTML page
+├── tests/                  # Testing folder
+│   ├── test_calculator.py  # Unit tests for calculator logic
+│   └── test_playwright.py # End-to-end tests for the web interface
+├── requirements.txt        # Python dependencies
+└── README.md               # Project documentation
+
+Final presentation 
+https://www.loom.com/share/544bed1561fe4a8eb8d4ef3ca7e97ede?sid=d1a261d3-9bfa-413b-a855-241f05636c44
+
+copy link and paste into google chrome. The video should appear and work perfectly !
