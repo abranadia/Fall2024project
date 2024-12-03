@@ -1,0 +1,54 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <form action="/compute" method="post" id="calculator-form">
+        <label for="operation">Select Operation:</label>
+        <select name="operation" id="operation">
+            <option value="mean">Compute Mean</option>
+            <option value="sample_std_dev">Compute Sample Standard Deviation</option>
+            <option value="population_std_dev">Compute Population Standard Deviation</option>
+            <option value="z_score">Compute Z Score</option>
+            <option value="regression">Compute Regression</option>
+            <option value="predict">Predict Y</option>
+        </select><br><br>
+
+        <textarea name="values" rows="10" cols="30" placeholder="Enter values here..." id="values"></textarea><br><br>
+
+        <button type="submit">Compute</button>
+        <button type="button" id="clear-button">Clear</button>
+    </form>
+    
+    <div id="result"></div>
+
+    <script>
+        document.querySelector("form").onsubmit = function(event) {
+            event.preventDefault();
+            let formData = new FormData(event.target);
+            fetch('/compute', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => document.getElementById('result').innerText = "Result: " + data.result)
+            .catch(error => console.error('Error:', error));
+        };
+
+        // Clear the form when the clear button is clicked
+        document.getElementById('clear-button').onclick = function() {
+            document.getElementById('values').value = '';
+            document.getElementById('result').innerText = '';
+        };
+    </script>
+</body>
+</html>
+
+</body>
+</html>
